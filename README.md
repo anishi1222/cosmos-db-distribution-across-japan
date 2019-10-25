@@ -9,6 +9,12 @@
 
 ## Configuration file
 
+- endpoint: URL for accessing Cosmos DB instance
+- key: Cosmos DB write/read key (either primary or secondary key)
+- multiWrite: If multi-master configuration is used, this attribute should be true.
+- testMode: READ or WRITE
+- targetRegion: Array of region name.
+
 ```json
 {
   "partitionKey": "/myPartitionKey",
