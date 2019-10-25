@@ -1,0 +1,14 @@
+{
+  "partitionKeyProperty": "/myPartitionKey",
+  "partitionKeyValue": "1001",
+  "database": "demo",
+  "container": "customers",
+
+  "testName": "",
+  "testDescription": "",
+  "testMode": "READ",
+
+  "endpoint": "https://logico-read-multi-region.documents.azure.com:443/",
+  "key": "0pRziTbgrpsSs2DTyvJq8sPqRrCCfcK7VQBDlyVHuwBbpoDUvbbHC9X5BWv3JaTVKfyqAoX5ECcpRnw7ll1fIQ==",
+  "targetRegion": ["Japan West"]
+}
