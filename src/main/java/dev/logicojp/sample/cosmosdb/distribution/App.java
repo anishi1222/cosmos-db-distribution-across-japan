@@ -5,7 +5,7 @@ import java.io.IOException;
 
 class App
 {
-    static void main( String... args )
+    void main( String... args )
     {
         if(args.length != 1) {
             System.err.println("Test configuration file is mandatory.");
