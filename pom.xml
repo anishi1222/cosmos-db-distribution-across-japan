@@ -20,7 +20,7 @@
         <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.6.0-M1</maven.surefire.plugin.version>
         <maven.jar.plugin.version>3.5.0</maven.jar.plugin.version>
-        <maven.install.plugin.version>4.0.0-beta-2</maven.install.plugin.version>
+        <maven.install.plugin.version>3.1.4</maven.install.plugin.version>
         <maven.resources.plugin.version>3.5.0</maven.resources.plugin.version>
         <maven.deploy.plugin.version>3.1.4</maven.deploy.plugin.version>
         <maven.site.plugin.version>3.22.0</maven.site.plugin.version>
