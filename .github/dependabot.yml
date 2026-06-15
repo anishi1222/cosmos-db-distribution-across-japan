@@ -9,4 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
-
+    ignore:
+      - dependency-name: "org.apache.maven.plugins:maven-install-plugin"
+        versions: ["4.x"]
