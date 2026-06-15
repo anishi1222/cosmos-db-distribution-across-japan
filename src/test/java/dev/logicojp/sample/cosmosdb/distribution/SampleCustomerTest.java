@@ -19,7 +19,7 @@ class SampleCustomerTest {
     void createDataCreatesOneHundredCustomersWithExpectedShape() {
         ArrayList<SampleCustomer> customers = new SampleCustomer().createData("/myPartitionKey");
 
-        assertEquals(100, customers.size());
+        assertEquals(1000, customers.size());
 
         Set<String> ids = new HashSet<>();
         customers.forEach(customer -> assertAll(

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.UUID;
 
-import com.github.javafaker.Faker;
+import net.datafaker.Faker;
 
 public class SampleCustomer {
     private static final Locale EN_US_LOCALE = Locale.of("en", "US");
