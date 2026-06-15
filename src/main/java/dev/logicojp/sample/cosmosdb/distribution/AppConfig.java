@@ -1,10 +1,10 @@
-package cosmos.global.distributions;
-
-import com.google.gson.Gson;
+package dev.logicojp.sample.cosmosdb.distribution;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+
+import com.google.gson.Gson;
 
 public class AppConfig {
 

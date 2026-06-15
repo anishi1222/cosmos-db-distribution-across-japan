@@ -1,19 +1,21 @@
-package cosmos.global.distributions;
-
-import com.github.javafaker.Faker;
+package dev.logicojp.sample.cosmosdb.distribution;
 
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.UUID;
 
+import com.github.javafaker.Faker;
+
 public class SampleCustomer {
-         String id;
-         String name;
-         String city;
-         String zipCode;
-         String region;
-         String myPartitionKey;
-         Integer userDefinedId;
+    private static final Locale EN_US_LOCALE = Locale.of("en", "US");
+
+    String id;
+    String name;
+    String city;
+    String zipCode;
+    String region;
+    String myPartitionKey;
+    Integer userDefinedId;
 
     public String getId() {
         return id;
@@ -73,9 +75,9 @@ public class SampleCustomer {
 
     public ArrayList<SampleCustomer> createData(String partitionKey) {
 
-        Faker faker = new Faker(new Locale("en_US"));
+        Faker faker = new Faker(EN_US_LOCALE);
         ArrayList<SampleCustomer> sampleCustomerList = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             SampleCustomer sampleCustomer = new SampleCustomer();
             sampleCustomer.setCity(faker.country().capital());
             sampleCustomer.setMyPartitionKey(partitionKey);

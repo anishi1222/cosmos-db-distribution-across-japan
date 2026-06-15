@@ -1,15 +1,15 @@
-package cosmos.global.distributions;
+package dev.logicojp.sample.cosmosdb.distribution;
 
-import com.azure.data.cosmos.ConnectionPolicy;
-import com.azure.data.cosmos.CosmosClient;
-import com.azure.data.cosmos.CosmosContainer;
-import reactor.core.scheduler.Schedulers;
-
+import static java.lang.Math.sqrt;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static java.lang.Math.sqrt;
+import com.azure.data.cosmos.ConnectionPolicy;
+import com.azure.data.cosmos.CosmosClient;
+import com.azure.data.cosmos.CosmosContainer;
+
+import reactor.core.scheduler.Schedulers;
 
 public class Benchmark {
     CosmosContainer container;

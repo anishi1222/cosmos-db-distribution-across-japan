@@ -4,39 +4,52 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>globaldistributions</groupId>
-    <artifactId>cosmos.globaldistributions.demo</artifactId>
+    <groupId>dev.logicojp.sample.cosmosdb</groupId>
+    <artifactId>distribution</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>cosmos.globaldistributions.demo</name>
-    <url>http://www.example.com</url>
+    <name>CosmosDB distribution demo</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>25</java.version>
+        <javafaker.version>1.0.1</javafaker.version>
+        <gson.version>2.8.9</gson.version>
+        <azure.cosmos.version>3.3.0</azure.cosmos.version>
+        <junit.version>4.13.1</junit.version>
+        <maven.clean.plugin.version>3.5.0</maven.clean.plugin.version>
+        <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.6.0-M1</maven.surefire.plugin.version>
+        <maven.jar.plugin.version>3.5.0</maven.jar.plugin.version>
+        <maven.install.plugin.version>3.0.0-M1</maven.install.plugin.version>
+        <maven.resources.plugin.version>3.5.0</maven.resources.plugin.version>
+        <maven.deploy.plugin.version>3.1.4</maven.deploy.plugin.version>
+        <maven.site.plugin.version>3.22.0</maven.site.plugin.version>
+        <maven.project.info.reports.plugin.version>3.9.0</maven.project.info.reports.plugin.version>
+        <maven.assembly.plugin.version>3.8.0</maven.assembly.plugin.version>
+        <junit.jupiter.version>6.1.0</junit.jupiter.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>1.0.1</version>
+            <version>${javafaker.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.9</version>
+            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-cosmos</artifactId>
-            <version>3.3.0</version>
+            <version>${azure.cosmos.version}</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>[4.13.1,)</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -47,41 +60,44 @@
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>${maven.clean.plugin.version}</version>
                 </plugin>
                 <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>${maven.resources.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
+                    <version>${maven.surefire.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>${maven.jar.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>${maven.install.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                    <version>${maven.deploy.plugin.version}</version>
                 </plugin>
                 <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.7.1</version>
+                    <version>${maven.site.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>${maven.project.info.reports.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -95,7 +111,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>cosmos.global.distributions.App</mainClass>
+                            <mainClass>dev.logicojp.sample.cosmosdb.distribution.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -113,8 +129,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>

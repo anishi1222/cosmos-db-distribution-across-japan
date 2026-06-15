@@ -1,11 +1,11 @@
-package cosmos.global.distributions;
+package dev.logicojp.sample.cosmosdb.distribution;
 
 import java.io.IOException;
 
 
-public class App
+class App
 {
-    public static void main( String... args )
+    static void main( String... args )
     {
         if(args.length != 1) {
             System.err.println("Test configuration file is mandatory.");
