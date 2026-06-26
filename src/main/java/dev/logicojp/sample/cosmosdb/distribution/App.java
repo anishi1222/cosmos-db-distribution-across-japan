@@ -3,9 +3,9 @@ package dev.logicojp.sample.cosmosdb.distribution;
 import java.io.IOException;
 
 
-class App
+public class App
 {
-    void main( String... args )
+    public static void main( String... args )
     {
         if(args.length != 1) {
             System.err.println("Test configuration file is mandatory.");
