@@ -17,7 +17,7 @@
         <gson.version>2.15.0</gson.version>
         <azure.cosmos.version>4.83.0</azure.cosmos.version>
         <jackson.version>2.23.0</jackson.version>
-        <netty.version>4.2.19.Final</netty.version>
+        <netty.version>4.2.20.Final</netty.version>
         <maven.clean.plugin.version>3.5.0</maven.clean.plugin.version>
         <maven.compiler.plugin.version>3.16.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.6.1</maven.surefire.plugin.version>
